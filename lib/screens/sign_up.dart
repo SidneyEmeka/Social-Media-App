@@ -104,7 +104,7 @@ class _AuthScreenState extends State<AuthScreen> {
               "Log in with",
               style: TextStyle(
                   fontSize: 20,
-                  fontWeight: FontWeight.normal,
+                  fontWeight: FontWeight.w200,
                   color: Colors.white),
             ),
             const SizedBox(
