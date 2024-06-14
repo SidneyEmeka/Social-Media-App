@@ -1,16 +1,32 @@
-# twitter
+# Twitter Pages
 
-A new Flutter project.
+Twitter UI(Front end).<br>
+Implementing creation of custom Widgets<br>
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+## Custom[Reusable] Widgets
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<table>
+	<tbody width="100%">
+	<tr>
+			<th>On boarding</th>	
+			<th>Form 2 @ home_two.dart</th>	
+		</tr>
+		<tr>
+			<td>
+			<img src="https://github.com/SidneyEmeka/twitter-clone/blob/master/assets/signUP.png" alt="signUP"></img>
+			</td>
+			<td>
+			<img src="https://github.com/SidneyEmeka/Application-Form-Page/blob/master/assets/home2.png" alt="HOME2"></img>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				🔗 <a href="https://twitter.com/siswipe">Tweet</a>
+			</td>
+			<td>
+				🔗 <a href="https://x.com/sidswipe">Tweet</a>
+			</td>
+		</tr>
+	</tbody>
+</table>
