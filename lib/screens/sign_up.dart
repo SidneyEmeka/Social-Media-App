@@ -14,29 +14,33 @@ class _AuthScreenState extends State<AuthScreen> {
     Widget buildTwitterLogo() {
       return const Center(
         child: SizedBox(
-            height: 200,
-            width: 200,
-            child: Icon(
-              FontAwesomeIcons.twitter,
-              size: 70,
-              color: Colors.white,
-            )),
+          height: 200,
+          width: 200,
+          child: Icon(
+            FontAwesomeIcons.twitter,
+            size: 70,
+            color: Colors.white,
+          ),
+        ),
       );
     }
 
+    //fingerprint Icon
     Widget buildFingerprintLogo() {
       return const Center(
         child: SizedBox(
-            height: 150,
-            width: 300,
-            child: Icon(
-              Icons.fingerprint,
-              size: 100,
-              color: Colors.white,
-            )),
+          height: 150,
+          width: 300,
+          child: Icon(
+            Icons.fingerprint,
+            size: 100,
+            color: Colors.white,
+          ),
+        ),
       );
     }
 
+    //buttons
     Widget buildButton(String label, bool showBg) {
       return Align(
         alignment: Alignment.center,
@@ -51,13 +55,21 @@ class _AuthScreenState extends State<AuthScreen> {
           width: 200,
           height: 45,
           child: Center(
-              child: Text(
-                label,
-                style: TextStyle(
-                  color: showBg ? Colors.blueAccent : Colors.white,
-                ),
-              )),
+            child: Text(
+              label,
+              style: TextStyle(
+                color: showBg ? Colors.blueAccent : Colors.white,
+              ),
+            ),
+          ),
         ),
+      );
+    }
+
+    //vertical spaces
+    Widget verticalSpace(double value) {
+      return SizedBox(
+        height: value,
       );
     }
 
@@ -82,17 +94,11 @@ class _AuthScreenState extends State<AuthScreen> {
                 color: Colors.white,
               ),
             ),
-            const SizedBox(
-              height: 40,
-            ),
+            verticalSpace(40),
             buildButton("Sign in", true),
-            const SizedBox(
-              height: 20,
-            ),
+            verticalSpace(20),
             buildButton("Log in", false),
-            const SizedBox(
-              height: 40,
-            ),
+            verticalSpace(40),
             const Text(
               "OR",
               style: TextStyle(
@@ -107,9 +113,7 @@ class _AuthScreenState extends State<AuthScreen> {
                   fontWeight: FontWeight.w200,
                   color: Colors.white),
             ),
-            const SizedBox(
-              height: 10,
-            ),
+            verticalSpace(10),
             buildFingerprintLogo()
           ],
         ),
