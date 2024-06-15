@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return  MaterialApp(
       theme: ThemeData(
           useMaterial3: true,
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepOrange)
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueAccent.withOpacity(0.8))
       ),
       debugShowCheckedModeBanner: false,
       home: const AuthScreen(),
