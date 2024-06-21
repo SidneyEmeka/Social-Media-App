@@ -10,15 +10,15 @@ Implementing creation of custom Widgets<br>
 	<tbody width="100%">
 	<tr>
 			<th>On boarding</th>	
-			<th>Form 2 @ home_two.dart</th>	
+			<th>FYP</th>	
 		</tr>
 		<tr>
 			<td>
 			<img src="https://github.com/SidneyEmeka/twitter-clone/blob/master/assets/signUP.png" alt="signUP"></img>
 			</td>
-			<td>
+			<!-- <td>
 			<img src="https://github.com/SidneyEmeka/Application-Form-Page/blob/master/assets/home2.png" alt="HOME2"></img>
-			</td>
+			</td> -->
 		</tr>
 		<tr>
 			<td>
