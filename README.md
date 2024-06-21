@@ -17,7 +17,7 @@ Implementing creation of custom Widgets<br>
 			<img src="https://github.com/SidneyEmeka/twitter-clone/blob/master/assets/signUP.png" alt="signUP"></img>
 			</td>
 			<td>
-			<img src="https://github.com/SidneyEmeka/Application-Form-Page/blob/master/assets/home2.png" alt="HOME2"></img>
+			<img sr="https://github.com/SidneyEmeka/Application-Form-Page/blob/master/assets/home2.png" alt="HOME2"></img>
 			</td>
 		</tr>
 		<tr>
