@@ -14,7 +14,7 @@ Implementing Page Rendering<br>
 		</tr>
 		<tr>
 			<td>
-			<img src="https://github.com/SidneyEmeka/Social-Media-App/blob/master/assets/onboard.png" alt="signUP"></img>
+			<img src="https://github.com/SidneyEmeka/Social-Media-App/blob/master/assets/onboarding.png" alt="signUP"></img>
 			</td>
 			 <td>
 			<img src="https://github.com/SidneyEmeka/twitter-clone/blob/master/assets/signUP.png" alt="HOME2"></img>
