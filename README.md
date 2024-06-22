@@ -1,7 +1,7 @@
 # Social Media App 
 
-Social Media App.<br>
-Implementing creation of custom Widgets<br>
+Twiitter clone<br>
+Implementing Page Rendering<br>
 
 
 ## Custom[Reusable] Widgets
