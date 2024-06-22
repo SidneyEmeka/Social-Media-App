@@ -77,9 +77,9 @@ class _AuthScreenState extends State<AuthScreen> {
         ),
         child: Column(
           children: [
-            verticalSpace(40),
+            verticalSpace(60),
             buildTwitterLogo(),
-            verticalSpace(40),
+            verticalSpace(60),
              Text(
               "See what's happening in \n the world right now",
               textAlign: TextAlign.center,
