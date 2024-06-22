@@ -8,29 +8,68 @@ class Timeline extends StatefulWidget {
   State<Timeline> createState() => _TimelineState();
 }
 
-class _TimelineState extends State<Timeline> {
-  int currentIndex = 0;
+class _TimelineState extends State<Timeline> with SingleTickerProviderStateMixin{
+  static const List<Tab> myTimelineTabs = [
+    Tab(text: "For you"),
+    Tab(text: "Following",)
+  ];
+
+  late TabController mytabController;
+  @override
+  void initState() {
+    super.initState();
+    mytabController = TabController(length: 2, vsync: this);
+  }
+
+  @override
+  void dispose() {
+    mytabController.dispose();
+    super.dispose();
+  }
 
   List<BottomNavigationBarItem> navItems = [
     const BottomNavigationBarItem(
-        icon: Icon(Icons.home,),
-    label: "Home"),
-    const BottomNavigationBarItem(icon: Icon(Icons.search,),
+        icon: Icon(
+          Icons.home,
+        ),
+        label: "Home"),
+    const BottomNavigationBarItem(
+        icon: Icon(
+          Icons.search,
+        ),
         label: "search"),
-    const BottomNavigationBarItem(icon: Icon(Icons.mic,),
+    const BottomNavigationBarItem(
+        icon: Icon(
+          Icons.mic,
+        ),
         label: "space"),
-    const BottomNavigationBarItem(icon: Icon(Icons.people,),
+    const BottomNavigationBarItem(
+        icon: Icon(
+          Icons.people,
+        ),
         label: "community"),
-    const BottomNavigationBarItem(icon: Icon(Icons.notifications_active_outlined,),
+    const BottomNavigationBarItem(
+        icon: Icon(
+          Icons.notifications_active_outlined,
+        ),
         label: "notifications"),
-    const BottomNavigationBarItem(icon: Icon(Icons.mail_outlined,),
+    const BottomNavigationBarItem(
+        icon: Icon(
+          Icons.mail_outlined,
+        ),
         label: "messages"),
   ];
+
+  int currentIndex = 0;
+
+
 
   Widget buildTimelinebody(int index) {
     switch (index) {
       case 0:
-        return const TwitterPostsPage();
+        return TwitterPostsPage(
+          controller: mytabController,
+        );
       case 1:
         return const Center(
           child: Text("Search"),
@@ -52,9 +91,9 @@ class _TimelineState extends State<Timeline> {
           child: Text("Message"),
         );
       default:
-        const TwitterPostsPage();
+         TwitterPostsPage( controller: mytabController);
     }
-    return const TwitterPostsPage();
+    return TwitterPostsPage( controller: mytabController);
   }
 
   @override
@@ -63,20 +102,31 @@ class _TimelineState extends State<Timeline> {
       appBar: AppBar(
         leading: Padding(
           padding: const EdgeInsets.all(8.0),
-          child: ClipOval(child: Image.asset("assets/pfp.jpeg", fit: BoxFit.cover, height: 10, width: 10,)),
+          child: ClipOval(
+              child: Image.asset(
+            "assets/pfp.jpeg",
+            fit: BoxFit.cover,
+            height: 8,
+            width: 10,
+          )),
         ),
-        title: const Icon(FontAwesomeIcons.twitter, color: Colors.blueAccent,),
+        title: Image.asset(
+          "assets/logo.jpg",
+          fit: BoxFit.cover,
+          width: 40,
+          height: 40,
+        ),
         centerTitle: true,
       ),
       backgroundColor: Colors.white,
       body: buildTimelinebody(currentIndex),
       bottomNavigationBar: BottomNavigationBar(
-        selectedItemColor: Colors.black,
-        unselectedItemColor: Colors.grey.shade800,
+        selectedItemColor: Colors.red,
+        unselectedItemColor: Colors.red.shade300,
         currentIndex: currentIndex,
         items: navItems,
         showSelectedLabels: false,
-        onTap: (index){
+        onTap: (index) {
           setState(() {
             currentIndex = index;
           });
@@ -86,19 +136,25 @@ class _TimelineState extends State<Timeline> {
   }
 }
 
-
-
-
-
-
-
 class TwitterPostsPage extends StatelessWidget {
-  const TwitterPostsPage({super.key});
+  final TabController controller;
+  const TwitterPostsPage({super.key, required this.controller, });
 
   @override
   Widget build(BuildContext context) {
-    return const SingleChildScrollView(
-      child: Column(),
-    );
+    return TabBarView(
+      controller: controller,
+        children: [
+      SingleChildScrollView(
+        child: Column(
+          children: [
+            Text("Helllo, Thats the twwet")
+          ],
+        ),
+      ),
+          Column(
+           children: [Text("People You Follow")],
+          )
+    ]);
   }
 }

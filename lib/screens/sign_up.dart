@@ -12,29 +12,22 @@ class _AuthScreenState extends State<AuthScreen> {
   @override
   Widget build(BuildContext context) {
     Widget buildTwitterLogo() {
-      return const Center(
-        child: SizedBox(
-          height: 200,
-          width: 200,
-          child: Icon(
-            FontAwesomeIcons.twitter,
-            size: 70,
-            color: Colors.white,
-          ),
+      return  Center(
+        child: Image.asset("assets/logo.jpg", fit: BoxFit.cover, width: 70, height: 70,
         ),
       );
     }
 
     //fingerprint Icon
     Widget buildFingerprintLogo() {
-      return const Center(
+      return Center(
         child: SizedBox(
           height: 150,
           width: 300,
           child: Icon(
             Icons.fingerprint,
             size: 100,
-            color: Colors.white,
+            color: Colors.red.shade900,
           ),
         ),
       );
@@ -48,8 +41,8 @@ class _AuthScreenState extends State<AuthScreen> {
           decoration: BoxDecoration(
             border: showBg
                 ? Border.all(color: Colors.transparent)
-                : Border.all(color: Colors.white, width: 2),
-            color: showBg ? Colors.white : Colors.transparent,
+                : Border.all(color: Colors.red.shade900, width: 2),
+            color: showBg ? Colors.red.shade900 : Colors.transparent,
             borderRadius: BorderRadius.circular(15),
           ),
           width: 200,
@@ -58,7 +51,7 @@ class _AuthScreenState extends State<AuthScreen> {
             child: Text(
               label,
               style: TextStyle(
-                color: showBg ? Colors.blueAccent : Colors.white,
+                color: showBg ? Colors.white : Colors.red.shade900,
               ),
             ),
           ),
@@ -74,7 +67,7 @@ class _AuthScreenState extends State<AuthScreen> {
     }
 
     return Scaffold(
-      backgroundColor: Colors.blueAccent.withOpacity(0.8),
+      backgroundColor: Colors.white,
       body: Container(
         margin: const EdgeInsets.only(
           top: 40,
@@ -84,14 +77,16 @@ class _AuthScreenState extends State<AuthScreen> {
         ),
         child: Column(
           children: [
+            verticalSpace(40),
             buildTwitterLogo(),
-            const Text(
+            verticalSpace(40),
+             Text(
               "See what's happening in \n the world right now",
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 28,
                 fontWeight: FontWeight.w800,
-                color: Colors.white,
+                color: Colors.red.shade900,
               ),
             ),
             verticalSpace(40),
@@ -99,19 +94,19 @@ class _AuthScreenState extends State<AuthScreen> {
             verticalSpace(20),
             buildButton("Log in", false),
             verticalSpace(40),
-            const Text(
+             Text(
               "OR",
               style: TextStyle(
                   fontSize: 30,
                   fontWeight: FontWeight.bold,
-                  color: Colors.white),
+                  color: Colors.red.shade900),
             ),
-            const Text(
+             Text(
               "Log in with",
               style: TextStyle(
                   fontSize: 20,
-                  fontWeight: FontWeight.w200,
-                  color: Colors.white),
+                  fontWeight: FontWeight.w300,
+                  color: Colors.red.shade900),
             ),
             verticalSpace(10),
             buildFingerprintLogo()
