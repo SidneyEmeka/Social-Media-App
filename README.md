@@ -1,7 +1,7 @@
-# Twitter Pages
+# Social Media App 
 
-Twitter UI(Front end).<br>
-Implementing creation of custom Widgets<br>
+Twiitter clone<br>
+Implementing Page Rendering<br>
 
 
 ## Custom[Reusable] Widgets
