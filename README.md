@@ -1,6 +1,6 @@
-# Twitter Pages
+# Social Media App 
 
-Twitter UI(Front end).<br>
+Social Media App.<br>
 Implementing creation of custom Widgets<br>
 
 
