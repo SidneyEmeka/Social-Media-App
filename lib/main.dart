@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueAccent.withOpacity(0.8))
       ),
       debugShowCheckedModeBanner: false,
-      home: const AuthScreen(),
+      home: const Timeline(),
     );
   }
 }

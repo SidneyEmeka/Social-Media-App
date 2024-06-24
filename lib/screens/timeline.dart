@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+import '../pages/timelinebody.dart';
+
 
 class Timeline extends StatefulWidget {
   const Timeline({super.key});
@@ -8,93 +10,56 @@ class Timeline extends StatefulWidget {
   State<Timeline> createState() => _TimelineState();
 }
 
-class _TimelineState extends State<Timeline> with SingleTickerProviderStateMixin{
-  static const List<Tab> myTimelineTabs = [
-    Tab(text: "For you"),
-    Tab(text: "Following",)
-  ];
-
-  late TabController mytabController;
-  @override
-  void initState() {
-    super.initState();
-    mytabController = TabController(length: 2, vsync: this);
-  }
-
-  @override
-  void dispose() {
-    mytabController.dispose();
-    super.dispose();
-  }
-
-  List<BottomNavigationBarItem> navItems = [
-    const BottomNavigationBarItem(
-        icon: Icon(
-          Icons.home,
-        ),
-        label: "Home"),
-    const BottomNavigationBarItem(
-        icon: Icon(
-          Icons.search,
-        ),
-        label: "search"),
-    const BottomNavigationBarItem(
-        icon: Icon(
-          Icons.mic,
-        ),
-        label: "space"),
-    const BottomNavigationBarItem(
-        icon: Icon(
-          Icons.people,
-        ),
-        label: "community"),
-    const BottomNavigationBarItem(
-        icon: Icon(
-          Icons.notifications_active_outlined,
-        ),
-        label: "notifications"),
-    const BottomNavigationBarItem(
-        icon: Icon(
-          Icons.mail_outlined,
-        ),
-        label: "messages"),
-  ];
-
-  int currentIndex = 0;
-
-
-
-  Widget buildTimelinebody(int index) {
-    switch (index) {
+class _TimelineState extends State<Timeline> {
+  int selectedIndex = 0;
+  Widget buildBody(int selectedIndex) {
+    switch(selectedIndex){
       case 0:
-        return TwitterPostsPage(
-          controller: mytabController,
-        );
+      return const Postspage();
       case 1:
         return const Center(
           child: Text("Search"),
-        );
-      case 2:
+        ); case 2:
         return const Center(
           child: Text("Space"),
-        );
-      case 3:
+        ); case 3:
         return const Center(
           child: Text("Community"),
-        );
-      case 4:
+        ); case 4:
+        return const Center(
+          child: Text("Messages"),
+        ); case 5:
         return const Center(
           child: Text("Notifications"),
         );
-      case 5:
-        return const Center(
-          child: Text("Message"),
-        );
-      default:
-         TwitterPostsPage( controller: mytabController);
+      default : const Center(
+      child: Text("Home"),
+      );
+      return const Center(
+        child: Text("Invalid Page"),
+      );
     }
-    return TwitterPostsPage( controller: mytabController);
   }
+
+  void onTapNavItem(int index) {
+    setState(() {
+      selectedIndex = index;
+      print(selectedIndex);
+    });
+  }
+
+
+  List<BottomNavigationBarItem> navItems = <BottomNavigationBarItem>[
+    const BottomNavigationBarItem(
+      icon: Icon(Icons.home),
+    label: "Home",
+    ),
+    const BottomNavigationBarItem(icon: Icon(Icons.search),label: "search",),
+    const BottomNavigationBarItem(icon: Icon(Icons.mic),label: "mic",),
+    const BottomNavigationBarItem(icon: Icon(Icons.people),label: "community",),
+    const BottomNavigationBarItem(icon: Icon(Icons.mail),label: "Mail",),
+    const BottomNavigationBarItem(icon: Icon(Icons.notifications),label: "Notifications",),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -103,58 +68,20 @@ class _TimelineState extends State<Timeline> with SingleTickerProviderStateMixin
         leading: Padding(
           padding: const EdgeInsets.all(8.0),
           child: ClipOval(
-              child: Image.asset(
-            "assets/pfp.jpeg",
-            fit: BoxFit.cover,
-            height: 8,
-            width: 10,
-          )),
+              child: Image.asset("assets/pfp.jpeg", height: 30, width: 30, fit: BoxFit.cover,),
+          ),
         ),
-        title: Image.asset(
-          "assets/logo.jpg",
-          fit: BoxFit.cover,
-          width: 40,
-          height: 40,
-        ),
+        title: Image.asset("assets/logo.jpg", height: 40, width: 40, fit: BoxFit.cover,),
         centerTitle: true,
       ),
-      backgroundColor: Colors.white,
-      body: buildTimelinebody(currentIndex),
+      body: buildBody(selectedIndex),
       bottomNavigationBar: BottomNavigationBar(
-        selectedItemColor: Colors.red,
-        unselectedItemColor: Colors.red.shade300,
-        currentIndex: currentIndex,
+        currentIndex: selectedIndex,
+        onTap: onTapNavItem,
+        unselectedItemColor: Colors.red.shade500,
+        selectedItemColor: Colors.red.shade900,
         items: navItems,
-        showSelectedLabels: false,
-        onTap: (index) {
-          setState(() {
-            currentIndex = index;
-          });
-        },
       ),
     );
-  }
-}
-
-class TwitterPostsPage extends StatelessWidget {
-  final TabController controller;
-  const TwitterPostsPage({super.key, required this.controller, });
-
-  @override
-  Widget build(BuildContext context) {
-    return TabBarView(
-      controller: controller,
-        children: [
-      SingleChildScrollView(
-        child: Column(
-          children: [
-            Text("Helllo, Thats the twwet")
-          ],
-        ),
-      ),
-          Column(
-           children: [Text("People You Follow")],
-          )
-    ]);
   }
 }
