@@ -12,8 +12,12 @@ class _AuthScreenState extends State<AuthScreen> {
   @override
   Widget build(BuildContext context) {
     Widget buildTwitterLogo() {
-      return  Center(
-        child: Image.asset("assets/logo.jpg", fit: BoxFit.cover, width: 70, height: 70,
+      return Center(
+        child: Image.asset(
+          "assets/logo.jpg",
+          fit: BoxFit.cover,
+          width: 70,
+          height: 70,
         ),
       );
     }
@@ -80,7 +84,7 @@ class _AuthScreenState extends State<AuthScreen> {
             verticalSpace(60),
             buildTwitterLogo(),
             verticalSpace(60),
-             Text(
+            Text(
               "See what's happening in \n the world right now",
               textAlign: TextAlign.center,
               style: TextStyle(
@@ -94,14 +98,14 @@ class _AuthScreenState extends State<AuthScreen> {
             verticalSpace(20),
             buildButton("Log in", false),
             verticalSpace(40),
-             Text(
+            Text(
               "OR",
               style: TextStyle(
                   fontSize: 30,
                   fontWeight: FontWeight.bold,
                   color: Colors.red.shade900),
             ),
-             Text(
+            Text(
               "Log in with",
               style: TextStyle(
                   fontSize: 20,
