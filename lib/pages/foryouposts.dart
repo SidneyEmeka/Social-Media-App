@@ -13,7 +13,6 @@ class Posts extends StatelessWidget {
   final String reposts;
   final String likes;
   final String impressions;
-  final String bookmarks;
 
   const Posts(
       {super.key,
@@ -26,7 +25,6 @@ class Posts extends StatelessWidget {
       required this.reposts,
       required this.likes,
       required this.impressions,
-      required this.bookmarks,
       required this.postWithImage,
       required this.postWithImageUrl});
 
@@ -47,7 +45,7 @@ class Posts extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
           border: Border(
-              bottom: BorderSide(width: 1, color: Colors.grey.shade700))),
+              bottom: BorderSide(width: 1, color: Colors.grey.shade500))),
       padding: const EdgeInsets.symmetric(
         horizontal: 10,
         vertical: 10,
@@ -103,11 +101,16 @@ class Posts extends StatelessWidget {
                   ],
                 ),
 
+                //The post
                 Text(
                   post,
-                  style: const TextStyle(color: Colors.black),
+                  maxLines: null,
+                  style: const TextStyle(
+                      color: Colors.black,
+                    ),
                 ),
 
+                //If post has an image
                 if (postWithImage)
                   Container(
                     decoration: BoxDecoration(
@@ -127,6 +130,8 @@ class Posts extends StatelessWidget {
                   ),
 
                 verticalSpace(10),
+
+                //Reactions
                 Row(
                   children: [
                     Expanded(
@@ -138,7 +143,7 @@ class Posts extends StatelessWidget {
                             size: 15,
                             color: Colors.grey.shade700,
                           ),
-                          horizontalSpace(5),
+                          horizontalSpace(3),
                           Text(
                             comments,
                             style: TextStyle(
@@ -158,7 +163,7 @@ class Posts extends StatelessWidget {
                             size: 15,
                             color: Colors.grey.shade700,
                           ),
-                          horizontalSpace(5),
+                          horizontalSpace(3),
                           Text(
                             reposts,
                             style: TextStyle(
@@ -178,7 +183,7 @@ class Posts extends StatelessWidget {
                             size: 15,
                             color: Colors.grey.shade700,
                           ),
-                          horizontalSpace(5),
+                          horizontalSpace(3),
                           Text(
                             likes,
                             style: TextStyle(
@@ -195,7 +200,6 @@ class Posts extends StatelessWidget {
                         children: [
                           Icon(Icons.bar_chart,
                               size: 15, color: Colors.grey.shade700),
-                          horizontalSpace(5),
                           Text(
                             impressions,
                             style: TextStyle(
@@ -205,9 +209,10 @@ class Posts extends StatelessWidget {
                           )
                         ],
                       ),
-                    ), //im//likes
+                    ),
+                    horizontalSpace(5),//im//likes
                     Expanded(
-                      flex: 2,
+                      flex: 1,
                       child: Row(
                         children: [
                           Icon(
@@ -215,14 +220,6 @@ class Posts extends StatelessWidget {
                             size: 15,
                             color: Colors.grey.shade700,
                           ),
-                          horizontalSpace(5),
-                          Text(
-                            bookmarks,
-                            style: TextStyle(
-                              color: Colors.grey.shade700,
-                              fontSize: 12,
-                            ),
-                          )
                         ],
                       ),
                     ), //impressions

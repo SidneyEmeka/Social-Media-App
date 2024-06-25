@@ -109,8 +109,8 @@ class _TimelineState extends State<Timeline> {
         showSelectedLabels: false,
         currentIndex: selectedIndex,
         onTap: onTapNavItem,
-        unselectedItemColor: Colors.red.shade400,
-        selectedItemColor: Colors.red.shade900,
+        unselectedItemColor: Colors.red.shade900,
+        selectedItemColor: Colors.red.shade400,
         items: navItems,
       ),
     );
