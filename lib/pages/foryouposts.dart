@@ -45,7 +45,7 @@ class Posts extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
           border: Border(
-              bottom: BorderSide(width: 1, color: Colors.grey.shade500))),
+              bottom: BorderSide(width: 1, color: Colors.grey.shade500),),),
       padding: const EdgeInsets.symmetric(
         horizontal: 10,
         vertical: 10,

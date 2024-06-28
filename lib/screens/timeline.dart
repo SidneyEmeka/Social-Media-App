@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import '../pages/timelinebody.dart';
 
@@ -11,6 +12,61 @@ class Timeline extends StatefulWidget {
 
 class _TimelineState extends State<Timeline> {
   int selectedIndex = 0;
+
+  Widget buildtitle(int selectedIndex) {
+    switch (selectedIndex) {
+      case 0:
+        return Image.asset(
+          "assets/logo.jpg",
+          height: 40,
+          width: 40,
+          fit: BoxFit.cover,
+        );
+      case 1:
+        return Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+            border: Border.all(
+              color: const Color.fromARGB(255, 76, 0, 51),
+            ),
+          ),
+          padding: const EdgeInsets.only(left: 15, bottom: 4),
+          width: MediaQuery.of(context).size.width / 2,
+          height: 30,
+          child: TextField(
+            inputFormatters: [
+              FilteringTextInputFormatter.allow(RegExp('[a-zA-z]'))
+            ],
+            style: const TextStyle(
+              fontSize: 10,
+            ),
+            enableSuggestions: true,
+            keyboardType: TextInputType.text,
+            decoration: const InputDecoration(
+              disabledBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(color: Colors.transparent)),
+              enabledBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(color: Colors.transparent)),
+              focusedBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(color: Colors.transparent)),
+              hintText: "Search",
+              hintStyle: TextStyle(
+                  fontSize: 10),
+            ),
+          ),
+        );
+      case 2:
+        return const Text("Space");
+      case 3:
+        return const Text("Community");
+      case 4:
+        return const Text("Messages");
+      case 5:
+        return const Text("Notifications");
+      default:
+        return const Text("Invalid page");
+    }
+  }
 
   Widget buildBody(int selectedIndex) {
     switch (selectedIndex) {
@@ -95,12 +151,7 @@ class _TimelineState extends State<Timeline> {
             ),
           ),
         ),
-        title: Image.asset(
-          "assets/logo.jpg",
-          height: 40,
-          width: 40,
-          fit: BoxFit.cover,
-        ),
+        title: buildtitle(selectedIndex),
         centerTitle: true,
       ),
       body: buildBody(selectedIndex),
