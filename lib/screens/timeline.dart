@@ -3,14 +3,14 @@ import 'package:flutter/services.dart';
 
 import '../pages/timelinebody.dart';
 
-class Timeline extends StatefulWidget {
-  const Timeline({super.key});
+class UserTimeline extends StatefulWidget {
+  const UserTimeline({super.key});
 
   @override
-  State<Timeline> createState() => _TimelineState();
+  State<UserTimeline> createState() => _UserTimelineState();
 }
 
-class _TimelineState extends State<Timeline> {
+class _UserTimelineState extends State<UserTimeline> {
   int selectedIndex = 0;
 
   Widget buildtitle(int selectedIndex) {
@@ -105,7 +105,7 @@ class _TimelineState extends State<Timeline> {
   void onTapNavItem(int index) {
     setState(() {
       selectedIndex = index;
-      print(selectedIndex);
+      // print(selectedIndex);
     });
   }
 

@@ -1,5 +1,8 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:twitter/screens/timeline.dart';
 
 class AuthScreen extends StatefulWidget {
   const AuthScreen({super.key});
@@ -113,7 +116,18 @@ class _AuthScreenState extends State<AuthScreen> {
                   color: Colors.red.shade900),
             ),
             verticalSpace(10),
-            buildFingerprintLogo()
+
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context, MaterialPageRoute(
+                  builder: (context) =>   const UserTimeline()
+                )
+                );
+              },
+              child: buildFingerprintLogo()
+            ),
+
           ],
         ),
       ),
