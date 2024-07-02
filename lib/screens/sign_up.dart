@@ -91,43 +91,55 @@ class _AuthScreenState extends State<AuthScreen> {
               "See what's happening in \n the world right now",
               textAlign: TextAlign.center,
               style: TextStyle(
-                fontSize: 28,
+                fontSize: 20,
                 fontWeight: FontWeight.w800,
                 color: Colors.red.shade900,
               ),
             ),
             verticalSpace(40),
-            buildButton("Sign in", true),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const UserTimeline()));
+              },
+              child: buildButton("Sign in", true),
+            ),
             verticalSpace(20),
-            buildButton("Log in", false),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const UserTimeline()));
+              },
+              child: buildButton("Log in", false),
+            ),
             verticalSpace(40),
             Text(
               "OR",
               style: TextStyle(
-                  fontSize: 30,
+                  fontSize: 25,
                   fontWeight: FontWeight.bold,
                   color: Colors.red.shade900),
             ),
             Text(
               "Log in with",
               style: TextStyle(
-                  fontSize: 20,
+                  fontSize: 15,
                   fontWeight: FontWeight.w300,
                   color: Colors.red.shade900),
             ),
-            verticalSpace(10),
-
+            verticalSpace(5),
             GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context, MaterialPageRoute(
-                  builder: (context) =>   const UserTimeline()
-                )
-                );
-              },
-              child: buildFingerprintLogo()
-            ),
-
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const UserTimeline()));
+                },
+                child: buildFingerprintLogo()),
           ],
         ),
       ),

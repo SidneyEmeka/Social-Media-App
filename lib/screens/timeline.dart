@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import '../pages/searchpage.dart';
 import '../pages/timelinebody.dart';
 
 class UserTimeline extends StatefulWidget {
@@ -73,9 +74,7 @@ class _UserTimelineState extends State<UserTimeline> {
       case 0:
         return const Postspage();
       case 1:
-        return const Center(
-          child: Text("Search"),
-        );
+        return const Searchpage();
       case 2:
         return const Center(
           child: Text("Space"),
