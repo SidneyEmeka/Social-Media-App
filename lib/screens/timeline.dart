@@ -14,6 +14,40 @@ class UserTimeline extends StatefulWidget {
 class _UserTimelineState extends State<UserTimeline> {
   int selectedIndex = 0;
 
+  Widget searchbar() {
+    return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
+        border: Border.all(
+          color: const Color.fromARGB(255, 76, 0, 51),
+        ),
+      ),
+      padding: const EdgeInsets.only(left: 15, bottom: 4),
+      width: MediaQuery.of(context).size.width / 1.5,
+      height: 30,
+      child: TextField(
+        inputFormatters: [
+          FilteringTextInputFormatter.allow(RegExp('[a-zA-z]'))
+        ],
+        style: const TextStyle(
+          fontSize: 10,
+        ),
+        enableSuggestions: true,
+        keyboardType: TextInputType.text,
+        decoration: const InputDecoration(
+          disabledBorder: UnderlineInputBorder(
+              borderSide: BorderSide(color: Colors.transparent)),
+          enabledBorder: UnderlineInputBorder(
+              borderSide: BorderSide(color: Colors.transparent)),
+          focusedBorder: UnderlineInputBorder(
+              borderSide: BorderSide(color: Colors.transparent)),
+          hintText: "Search",
+          hintStyle: TextStyle(fontSize: 10),
+        ),
+      ),
+    );
+  }
+
   Widget buildtitle(int selectedIndex) {
     switch (selectedIndex) {
       case 0:
@@ -24,38 +58,7 @@ class _UserTimelineState extends State<UserTimeline> {
           fit: BoxFit.cover,
         );
       case 1:
-        return Container(
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10),
-            border: Border.all(
-              color: const Color.fromARGB(255, 76, 0, 51),
-            ),
-          ),
-          padding: const EdgeInsets.only(left: 15, bottom: 4),
-          width: MediaQuery.of(context).size.width / 2,
-          height: 30,
-          child: TextField(
-            inputFormatters: [
-              FilteringTextInputFormatter.allow(RegExp('[a-zA-z]'))
-            ],
-            style: const TextStyle(
-              fontSize: 10,
-            ),
-            enableSuggestions: true,
-            keyboardType: TextInputType.text,
-            decoration: const InputDecoration(
-              disabledBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(color: Colors.transparent)),
-              enabledBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(color: Colors.transparent)),
-              focusedBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(color: Colors.transparent)),
-              hintText: "Search",
-              hintStyle: TextStyle(
-                  fontSize: 10),
-            ),
-          ),
-        );
+        return searchbar();
       case 2:
         return const Text("Space");
       case 3:
@@ -66,6 +69,44 @@ class _UserTimelineState extends State<UserTimeline> {
         return const Text("Notifications");
       default:
         return const Text("Invalid page");
+    }
+  }
+
+  Widget buildActions(int selectedIndex) {
+    switch (selectedIndex) {
+      case 0:
+        return const SizedBox(
+          width: 0.0,
+        );
+      case 1:
+        return Padding(
+          padding: const EdgeInsets.only(right: 10.0),
+          child: Icon(
+            Icons.settings,
+            color: Colors.red.shade900,
+            size: 25,
+          ),
+        );
+      case 2:
+        return const SizedBox(
+          width: 0.0,
+        );
+      case 3:
+        return const SizedBox(
+          width: 0.0,
+        );
+      case 4:
+        return const SizedBox(
+          width: 0.0,
+        );
+      case 5:
+        return const SizedBox(
+          width: 0.0,
+        );
+      default:
+        return const SizedBox(
+          width: 0.0,
+        );
     }
   }
 
@@ -140,18 +181,19 @@ class _UserTimelineState extends State<UserTimeline> {
     return Scaffold(
       appBar: AppBar(
         leading: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(8),
           child: ClipOval(
             child: Image.asset(
               "assets/pfp.jpeg",
-              height: 30,
-              width: 30,
+              height: 25,
+              width: 25,
               fit: BoxFit.cover,
             ),
           ),
         ),
         title: buildtitle(selectedIndex),
-        centerTitle: true,
+        centerTitle: selectedIndex == 1 ? false : true,
+        actions: [buildActions(selectedIndex)],
       ),
       body: buildBody(selectedIndex),
       bottomNavigationBar: BottomNavigationBar(
