@@ -1,10 +1,8 @@
 # Social Media App 
 
-Twiitter clone<br>
-Implementing Page Rendering<br>
+Using Twitter as Blueprint<br>
+Implementing Page Rendering, Routing, Reusable widgets, UI<br>
 
-
-## Custom[Reusable] Widgets
 
 <table>
 	<tbody width="100%">
