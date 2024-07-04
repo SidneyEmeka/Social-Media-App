@@ -26,6 +26,7 @@ class _UserTimelineState extends State<UserTimeline> {
       width: MediaQuery.of(context).size.width / 1.5,
       height: 30,
       child: TextField(
+      //  textAlign: TextAlign.center,
         inputFormatters: [
           FilteringTextInputFormatter.allow(RegExp('[a-zA-z]'))
         ],
@@ -42,7 +43,7 @@ class _UserTimelineState extends State<UserTimeline> {
           focusedBorder: UnderlineInputBorder(
               borderSide: BorderSide(color: Colors.transparent)),
           hintText: "Search",
-          hintStyle: TextStyle(fontSize: 10),
+          hintStyle: TextStyle(fontSize: 10,),
         ),
       ),
     );
