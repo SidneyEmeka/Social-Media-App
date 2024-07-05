@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import '../pages/communitypage.dart';
 import '../pages/searchpage.dart';
 import '../pages/timelinebody.dart';
 
@@ -23,7 +24,7 @@ class _UserTimelineState extends State<UserTimeline> {
         ),
       ),
       padding: const EdgeInsets.only(left: 15, bottom: 4),
-      width: MediaQuery.of(context).size.width / 1.5,
+      width: MediaQuery.of(context).size.width / 2,
       height: 30,
       child: TextField(
       //  textAlign: TextAlign.center,
@@ -63,7 +64,11 @@ class _UserTimelineState extends State<UserTimeline> {
       case 2:
         return const Text("Space");
       case 3:
-        return const Text("Community");
+        return const Text("Communities",
+        style: TextStyle(
+          fontSize: 15,
+          fontWeight: FontWeight.w600,
+        ),);
       case 4:
         return const Text("Messages");
       case 5:
@@ -93,8 +98,14 @@ class _UserTimelineState extends State<UserTimeline> {
           width: 0.0,
         );
       case 3:
-        return const SizedBox(
-          width: 0.0,
+        return Padding(
+          padding: const EdgeInsets.only(right: 8.0),
+          child: Row(
+            children: [
+              Icon(Icons.search_rounded, color: Colors.red.shade900,size: 25,),
+              Icon(Icons.people_alt_outlined, color: Colors.red.shade900,size: 25,)
+            ],
+          ),
         );
       case 4:
         return const SizedBox(
@@ -122,9 +133,7 @@ class _UserTimelineState extends State<UserTimeline> {
           child: Text("Space"),
         );
       case 3:
-        return const Center(
-          child: Text("Community"),
-        );
+        return const Communitypage();
       case 4:
         return const Center(
           child: Text("Messages"),

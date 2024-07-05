@@ -145,28 +145,15 @@ class _SearchpageState extends State<Searchpage> {
         appBar: AppBar(
           toolbarHeight: 0,
           bottom: TabBar(
+            tabAlignment: TabAlignment.start,
             indicatorColor: Colors.red.shade900,
             labelStyle: const TextStyle(
               fontSize: 12,
               fontWeight: FontWeight.bold,
               color: Colors.black,
             ),
-            // isScrollable: true,
-            //  labelPadding: EdgeInsetsDirectional.only(end: 15),
+            isScrollable: true,
             tabs: mytabs,
-            // tabs: const [
-            //   Text("For You"),
-            //   Padding(
-            //     padding: EdgeInsets.only(left: 5.0),
-            //     child: Text("Trending"),
-            //   ),
-            //   Text("News"),
-            //   Padding(
-            //     padding: EdgeInsets.all(5.0),
-            //     child: Text("Sports"),
-            //   ),
-            //   Text("Entertainment"),
-            // ],
           ),
         ),
         body: TabBarView(
@@ -204,8 +191,8 @@ class _SearchpageState extends State<Searchpage> {
 
             //Trending
             ListView(children: [
-              whatsTrendingBanner("assets/banner.webp", "Award", "Live",
-                  "BET Awards 2024"),
+              whatsTrendingBanner(
+                  "assets/banner.webp", "Award", "Live", "BET Awards 2024"),
               const SizedBox(
                 height: 10,
               ),
@@ -222,7 +209,8 @@ class _SearchpageState extends State<Searchpage> {
               const SizedBox(
                 height: 15,
               ),
-              whatsTrending("Happy 4th of July", 7022, "Trending with God is good"),
+              whatsTrending(
+                  "Happy 4th of July", 7022, "Trending with God is good"),
               whatsTrending("Bitcoin Chief", 9899, "Trending with GCF"),
               whatsTrending("Epstein", 1582, "Politics . Trending"),
               whatsTrending("#Flutter", 1000, "Techonology . Trending"),
