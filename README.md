@@ -12,10 +12,10 @@ Implementing Page Rendering, Routing, Reusable widgets, UI<br>
 		</tr>
 		<tr>
 			<td>
-			<img src="https://github.com/SidneyEmeka/Social-Media-App/blob/master/assets/rdm/onboarding.png" alt="signUP"></img>
+			<img src="https://github.com/SidneyEmeka/myfiles/blob/master/rdm/onboarding.png" alt="signUP"></img>
 			</td>
 			 <td>
-			<img src="https://github.com/SidneyEmeka/twitter-clone/blob/master/assets/rdm/signUP.png" alt="HOME2"></img>
+			<img src="https://github.com/SidneyEmeka/myfiles/blob/master/rdm/signUP.png" alt="HOME2"></img>
 			</td>
 		</tr>
 		<tr>
@@ -37,10 +37,10 @@ Implementing Page Rendering, Routing, Reusable widgets, UI<br>
 		</tr>
 		<tr>
 			<td>
-			<img src="https://github.com/SidneyEmeka/Social-Media-App/blob/master/assets/rdm/timeline.png" alt="signUP"></img>
+			<img src="https://github.com/SidneyEmeka/myfiles/blob/master/rdm/timeline.png" alt="signUP"></img>
 			</td>
 			 <td>
-			<img src="https://github.com/SidneyEmeka/twitter-clone/blob/master/assets/rdm/trending.png" alt="HOME2"></img>
+			<img src="https://github.com/SidneyEmeka/myfiles/blob/master/rdm/trending.png" alt="HOME2"></img>
 			</td>
 		</tr>
 		<tr>
