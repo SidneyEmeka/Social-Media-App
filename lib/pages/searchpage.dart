@@ -145,7 +145,7 @@ class _SearchpageState extends State<Searchpage> {
         appBar: AppBar(
           toolbarHeight: 0,
           bottom: TabBar(
-            tabAlignment: TabAlignment.start,
+           tabAlignment: TabAlignment.start,
             indicatorColor: Colors.red.shade900,
             labelStyle: const TextStyle(
               fontSize: 12,

@@ -18,13 +18,14 @@ class _UserTimelineState extends State<UserTimeline> {
   Widget searchbar() {
     return Container(
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: BorderRadius.circular(15),
         border: Border.all(
           color: const Color.fromARGB(255, 76, 0, 51),
         ),
       ),
       padding: const EdgeInsets.only(left: 15, bottom: 4),
-      width: MediaQuery.of(context).size.width / 2,
+      margin: EdgeInsets.only(left: 10),
+      width: MediaQuery.of(context).size.width / 1.7,
       height: 30,
       child: TextField(
       //  textAlign: TextAlign.center,
