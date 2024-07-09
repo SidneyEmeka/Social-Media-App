@@ -15,6 +15,7 @@ class Postspage extends StatelessWidget {
                 indicatorColor: Colors.red.shade900,
                 dividerColor: Colors.grey.shade500,
                 labelColor: Colors.black,
+
                 labelPadding: const EdgeInsets.only(bottom: 5),
                 tabs: const [
                   Text("For You"),
