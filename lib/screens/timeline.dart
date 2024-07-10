@@ -21,7 +21,7 @@ class _UserTimelineState extends State<UserTimeline> {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
         border: Border.all(
-          color: Colors.black,
+          color: Colors.grey.shade600,
         ),
       ),
       //width: MediaQuery.of(context).size.width / 1.2,
@@ -36,17 +36,18 @@ class _UserTimelineState extends State<UserTimeline> {
         ),
         enableSuggestions: true,
         keyboardType: TextInputType.text,
-        decoration: const InputDecoration(
-          disabledBorder: UnderlineInputBorder(
+        decoration: InputDecoration(
+          disabledBorder: const UnderlineInputBorder(
               borderSide: BorderSide(color: Colors.transparent)),
-          enabledBorder: UnderlineInputBorder(
+          enabledBorder: const UnderlineInputBorder(
               borderSide: BorderSide(color: Colors.transparent)),
-          focusedBorder: UnderlineInputBorder(
+          focusedBorder: const UnderlineInputBorder(
               borderSide: BorderSide(color: Colors.transparent)),
           hintText: "Search",
           hintStyle: TextStyle(
+            fontWeight: FontWeight.normal,
             fontSize: 15,
-            color: Colors.black,
+            color: Colors.grey.shade500,
           ),
         ),
       ),
@@ -219,11 +220,11 @@ class _UserTimelineState extends State<UserTimeline> {
                   shape: BoxShape.circle,
                   image: DecorationImage(
                     fit: BoxFit.cover,
-                    image: AssetImage("assets/pfp.jpeg"),
+                    image: AssetImage("assets/kvnpfp.jpg"),
                   )),
             )),
         title: buildtitle(selectedIndex),
-        centerTitle: selectedIndex == 1 ? false : true,
+        centerTitle: true,
         actions: [buildActions(selectedIndex)],
       ),
       body: buildBody(selectedIndex),

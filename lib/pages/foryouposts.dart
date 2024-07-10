@@ -44,8 +44,10 @@ class Posts extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          border: Border(
-              bottom: BorderSide(width: 1, color: Colors.grey.shade500),),),
+        border: Border(
+          bottom: BorderSide(width: 1, color: Colors.grey.shade500),
+        ),
+      ),
       padding: const EdgeInsets.symmetric(
         horizontal: 10,
         vertical: 10,
@@ -106,8 +108,8 @@ class Posts extends StatelessWidget {
                   post,
                   maxLines: null,
                   style: const TextStyle(
-                      color: Colors.black,
-                    ),
+                    color: Colors.black,
+                  ),
                 ),
 
                 //If post has an image
@@ -210,7 +212,7 @@ class Posts extends StatelessWidget {
                         ],
                       ),
                     ),
-                    horizontalSpace(5),//im//likes
+                    horizontalSpace(5), //im//likes
                     Expanded(
                       flex: 1,
                       child: Row(
