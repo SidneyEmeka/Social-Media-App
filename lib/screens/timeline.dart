@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import '../pages/communitypage.dart';
+import '../pages/messagespage.dart';
 import '../pages/searchpage.dart';
 import '../pages/timelinebody.dart';
 
@@ -18,17 +19,15 @@ class _UserTimelineState extends State<UserTimeline> {
   Widget searchbar() {
     return Container(
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(15),
+        borderRadius: BorderRadius.circular(20),
         border: Border.all(
-          color: const Color.fromARGB(255, 76, 0, 51),
+          color: Colors.black,
         ),
       ),
-      padding: const EdgeInsets.only(left: 15, bottom: 4),
-      margin: EdgeInsets.only(left: 10),
-      width: MediaQuery.of(context).size.width / 1.7,
-      height: 30,
+      //width: MediaQuery.of(context).size.width / 1.2,
+      height: 35,
       child: TextField(
-      //  textAlign: TextAlign.center,
+        textAlign: TextAlign.center,
         inputFormatters: [
           FilteringTextInputFormatter.allow(RegExp('[a-zA-z]'))
         ],
@@ -45,7 +44,10 @@ class _UserTimelineState extends State<UserTimeline> {
           focusedBorder: UnderlineInputBorder(
               borderSide: BorderSide(color: Colors.transparent)),
           hintText: "Search",
-          hintStyle: TextStyle(fontSize: 10,),
+          hintStyle: TextStyle(
+            fontSize: 15,
+            color: Colors.black,
+          ),
         ),
       ),
     );
@@ -65,13 +67,21 @@ class _UserTimelineState extends State<UserTimeline> {
       case 2:
         return const Text("Space");
       case 3:
-        return const Text("Communities",
-        style: TextStyle(
-          fontSize: 15,
-          fontWeight: FontWeight.w600,
-        ),);
+        return const Text(
+          "Communities",
+          style: TextStyle(
+            fontSize: 15,
+            fontWeight: FontWeight.w600,
+          ),
+        );
       case 4:
-        return const Text("Messages");
+        return const Text(
+          "Messages",
+          style: TextStyle(
+            fontSize: 15,
+            fontWeight: FontWeight.w600,
+          ),
+        );
       case 5:
         return const Text("Notifications");
       default:
@@ -86,11 +96,11 @@ class _UserTimelineState extends State<UserTimeline> {
           width: 0.0,
         );
       case 1:
-        return Padding(
-          padding: const EdgeInsets.only(right: 10.0),
+        return const Padding(
+          padding: EdgeInsets.only(right: 10.0),
           child: Icon(
             Icons.settings,
-            color: Colors.red.shade900,
+            color: Colors.black,
             size: 25,
           ),
         );
@@ -99,18 +109,31 @@ class _UserTimelineState extends State<UserTimeline> {
           width: 0.0,
         );
       case 3:
-        return Padding(
-          padding: const EdgeInsets.only(right: 8.0),
+        return const Padding(
+          padding: EdgeInsets.only(right: 8.0),
           child: Row(
             children: [
-              Icon(Icons.search_rounded, color: Colors.red.shade900,size: 25,),
-              Icon(Icons.people_alt_outlined, color: Colors.red.shade900,size: 25,)
+              Icon(
+                Icons.search_rounded,
+                color: Colors.black,
+                size: 25,
+              ),
+              Icon(
+                Icons.people_alt_outlined,
+                color: Colors.black,
+                size: 25,
+              )
             ],
           ),
         );
       case 4:
-        return const SizedBox(
-          width: 0.0,
+        return const Padding(
+          padding: EdgeInsets.only(right: 10.0),
+          child: Icon(
+            Icons.settings,
+            color: Colors.black,
+            size: 25,
+          ),
         );
       case 5:
         return const SizedBox(
@@ -136,9 +159,7 @@ class _UserTimelineState extends State<UserTimeline> {
       case 3:
         return const Communitypage();
       case 4:
-        return const Center(
-          child: Text("Messages"),
-        );
+        return const Messagespage();
       case 5:
         return const Center(
           child: Text("Notifications"),
@@ -192,16 +213,15 @@ class _UserTimelineState extends State<UserTimeline> {
     return Scaffold(
       appBar: AppBar(
         leading: Padding(
-          padding: const EdgeInsets.all(8),
-          child: ClipOval(
-            child: Image.asset(
-              "assets/pfp.jpeg",
-              height: 25,
-              width: 25,
-              fit: BoxFit.cover,
-            ),
-          ),
-        ),
+            padding: const EdgeInsets.only(left: 8, top: 8, bottom: 8),
+            child: Container(
+              decoration: const BoxDecoration(
+                  shape: BoxShape.circle,
+                  image: DecorationImage(
+                    fit: BoxFit.cover,
+                    image: AssetImage("assets/pfp.jpeg"),
+                  )),
+            )),
         title: buildtitle(selectedIndex),
         centerTitle: selectedIndex == 1 ? false : true,
         actions: [buildActions(selectedIndex)],
