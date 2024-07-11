@@ -27,7 +27,6 @@ class _MessagespageState extends State<Messagespage> {
   Widget messageTile(String imgUrl, String handle, String userName, String date,
       String lastText) {
     return Container(
-
         margin: const EdgeInsets.only(left: 5, right: 5, bottom: 15),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -108,12 +107,16 @@ class _MessagespageState extends State<Messagespage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white38,
       appBar: AppBar(
-        toolbarHeight: 20,
+        toolbarHeight: 16,
+        elevation: 0,
+        shadowColor: Colors.transparent,
         leading: const SizedBox(),
         bottom: PreferredSize(
           preferredSize: Size.fromHeight(35),
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Container(
                 width: MediaQuery.of(context).size.width / 1.1,
@@ -151,7 +154,10 @@ class _MessagespageState extends State<Messagespage> {
                   ),
                 ),
               ),
-              Divider(thickness: 1, color: Colors.grey.shade500),
+              Divider(
+                thickness: 1,
+                color: Colors.grey.shade500,
+              ),
             ],
           ),
         ),
@@ -159,34 +165,46 @@ class _MessagespageState extends State<Messagespage> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            messageTile("assets/me.jpg", "Nnaemeka Sidney", "sidswipe",
-                "10/06/2024", "How fa"),
+            messageTile("assets/fybanner.jpg", "Chris Abba", "iamhighbow",
+                "10/06/2024", "It has finished"),
             messageTile(
-                "assets/me.jpg",
+                "assets/barrypfp.jpg",
                 "barrywhyte",
                 "bubebarrywhyteyyy",
                 "10/06/2024",
                 "Thank you for your trial... Your attempt did not match our lucky box. Let's give it another shot"),
-            messageTile("assets/me.jpg", "Nnaemeka Sidney", "sidswipe",
-                "10/06/2024", "How fa"),
-            messageTile("assets/me.jpg", "Nnaemeka Sidney", "sidswipe",
-                "10/06/2024", "How fa"),
-            messageTile("assets/me.jpg", "Nnaemeka Sidney", "sidswipe",
-                "10/06/2024", "How fa"),
-            messageTile("assets/me.jpg", "Nnaemeka Sidney", "sidswipe",
-                "10/06/2024", "How fa"),
-            messageTile("assets/me.jpg", "Nnaemeka Sidney", "sidswipe",
-                "10/06/2024", "How fa"),
-            messageTile("assets/me.jpg", "Nnaemeka Sidney", "sidswipe",
-                "10/06/2024", "How fa"),
-            messageTile("assets/me.jpg", "Nnaemeka Sidney", "sidswipe",
-                "10/06/2024", "How fa"),
-            messageTile("assets/me.jpg", "Nnaemeka Sidney", "sidswipe",
-                "10/06/2024", "How fa"),
-            messageTile("assets/me.jpg", "Nnaemeka Sidney", "sidswipe",
-                "10/06/2024", "How fa"),
-            messageTile("assets/me.jpg", "Nnaemeka Sidney", "sidswipe",
-                "10/06/2024", "How fa"),
+            messageTile("assets/sails.jpg", "Bas'i Okansi", "bansi",
+                "1/06/2024", "Alright"),
+            messageTile("assets/kedupfp.jpg", "Kedu App", "keduapp",
+                "19/05/2024", "Welcome Onboard"),
+            messageTile("assets/lp.jpg", "Riddit", "thereal_riddit",
+                "10/05/2024", "Probably next week or so"),
+            messageTile("assets/wizpfp.jpg", "Wizkid", "wizkidayo", "1/05/2024",
+                " 🦅 "),
+            messageTile(
+                "assets/bpfp.jpg",
+                "Bitcoin Chief",
+                "gauischibueze",
+                "23/04/2024",
+                "Are the candidates still playing or are they learning"),
+            messageTile(
+                "assets/cypfp.jpg",
+                "Hertford Harry",
+                "chizzywalter",
+                "21/04/2024",
+                "It does'nt matter matter as long they mint this week, we would still be in profit"),
+            messageTile("assets/pfp.jpeg", "Casmir Eze", "ceze", "10/04/2024",
+                "Sorry I missed your calls"),
+            messageTile(
+                "assets/truth.jpg",
+                "Bright Stars",
+                "brightstars",
+                "1/04/2024",
+                "You violated our community rules so you have been suspended"),
+            messageTile("assets/theboys.jpg", "THE BOYS", "theboys",
+                "11/03/2024", "You have been promoted"),
+            messageTile("assets/kvnpfp.jpg", "Kvn Pablo", "kvngzpablo",
+                "10/03/2024", "Odimma"),
           ],
         ),
       ),

@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 
 import '../pages/communitypage.dart';
 import '../pages/messagespage.dart';
+import '../pages/notificationspage.dart';
 import '../pages/searchpage.dart';
 import '../pages/timelinebody.dart';
 
@@ -162,9 +163,7 @@ class _UserTimelineState extends State<UserTimeline> {
       case 4:
         return const Messagespage();
       case 5:
-        return const Center(
-          child: Text("Notifications"),
-        );
+        return const Notificationspage();
       default:
         const Center(
           child: Text("Home"),
@@ -192,7 +191,7 @@ class _UserTimelineState extends State<UserTimeline> {
       label: "search",
     ),
     const BottomNavigationBarItem(
-      icon: Icon(Icons.mic),
+      icon: Icon(Icons.rectangle_outlined),
       label: "mic",
     ),
     const BottomNavigationBarItem(
@@ -233,8 +232,8 @@ class _UserTimelineState extends State<UserTimeline> {
         showSelectedLabels: false,
         currentIndex: selectedIndex,
         onTap: onTapNavItem,
-        unselectedItemColor: Colors.red.shade900,
-        selectedItemColor: Colors.red.shade400,
+        unselectedItemColor: Colors.black,
+        selectedItemColor: Colors.black87,
         items: navItems,
       ),
     );
