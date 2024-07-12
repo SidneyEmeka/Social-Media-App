@@ -114,7 +114,7 @@ class _MessagespageState extends State<Messagespage> {
         shadowColor: Colors.transparent,
         leading: const SizedBox(),
         bottom: PreferredSize(
-          preferredSize: Size.fromHeight(35),
+          preferredSize: const Size.fromHeight(35),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [

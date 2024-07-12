@@ -639,7 +639,6 @@ class _NotificationspageState extends State<Notificationspage> {
                   ],
                 ),
               ),
-              const Text("2"),
               const Text("3"),
             ],
           ),
