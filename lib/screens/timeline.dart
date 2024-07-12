@@ -85,7 +85,11 @@ class _UserTimelineState extends State<UserTimeline> {
           ),
         );
       case 5:
-        return const Text("Notifications");
+        return const Text("Notifications",
+          style: TextStyle(
+            fontSize: 15,
+            fontWeight: FontWeight.w600,
+          ),);
       default:
         return const Text("Invalid page");
     }
@@ -138,8 +142,13 @@ class _UserTimelineState extends State<UserTimeline> {
           ),
         );
       case 5:
-        return const SizedBox(
-          width: 0.0,
+        return const Padding(
+          padding: EdgeInsets.only(right: 10.0),
+          child: Icon(
+            Icons.settings,
+            color: Colors.black,
+            size: 25,
+          ),
         );
       default:
         return const SizedBox(
