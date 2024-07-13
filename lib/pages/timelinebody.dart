@@ -9,7 +9,9 @@ class Postspage extends StatelessWidget {
     return DefaultTabController(
         length: 2,
         child: Scaffold(
+            backgroundColor: Colors.white,
             appBar: AppBar(
+              backgroundColor: Colors.white,
               toolbarHeight: 0,
               bottom: TabBar(
                 indicatorColor: Colors.red.shade900,

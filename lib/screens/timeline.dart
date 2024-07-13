@@ -455,12 +455,14 @@ class _UserTimelineState extends State<UserTimeline> {
                 )
               ],
             ),
-           verticalSpace(50),
-           Icon(FontAwesomeIcons.moon)
+            verticalSpace(50),
+            Icon(FontAwesomeIcons.moon)
           ],
         ),
       )),
       appBar: AppBar(
+        scrolledUnderElevation: 0,
+        backgroundColor: Colors.white,
         // leading: Padding(
         //     padding: const EdgeInsets.only(left: 8, top: 8, bottom: 8),
         //     child: Container(
@@ -477,6 +479,7 @@ class _UserTimelineState extends State<UserTimeline> {
       ),
       body: buildBody(selectedIndex),
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.red,
         showUnselectedLabels: false,
         showSelectedLabels: false,
         currentIndex: selectedIndex,

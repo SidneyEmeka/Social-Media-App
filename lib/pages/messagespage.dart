@@ -107,10 +107,11 @@ class _MessagespageState extends State<Messagespage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white38,
+      backgroundColor: Colors.white,
       appBar: AppBar(
+        scrolledUnderElevation: 0,
+        backgroundColor: Colors.white,
         toolbarHeight: 16,
-        elevation: 0,
         shadowColor: Colors.transparent,
         leading: const SizedBox(),
         bottom: PreferredSize(

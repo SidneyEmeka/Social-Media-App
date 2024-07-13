@@ -108,6 +108,7 @@ class Posts extends StatelessWidget {
                   post,
                   maxLines: null,
                   style: const TextStyle(
+                    fontSize: 12,
                     color: Colors.black,
                   ),
                 ),

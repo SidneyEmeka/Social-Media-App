@@ -87,6 +87,7 @@ class _CommunitypageState extends State<Communitypage> {
       length: 2,
       child: Scaffold(
         appBar: AppBar(
+          backgroundColor: Colors.white,
           toolbarHeight: 0,
           bottom: TabBar(
             indicatorColor: Colors.red.shade900,

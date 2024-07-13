@@ -408,7 +408,9 @@ class _NotificationspageState extends State<Notificationspage> {
     return DefaultTabController(
         length: 3,
         child: Scaffold(
+          backgroundColor: Colors.white,
           appBar: AppBar(
+            backgroundColor: Colors.white,
             toolbarHeight: 0,
             bottom: TabBar(
               indicatorColor: Colors.red.shade900,

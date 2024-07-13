@@ -143,6 +143,7 @@ class _SearchpageState extends State<Searchpage> {
       length: mytabs.length,
       child: Scaffold(
         appBar: AppBar(
+          backgroundColor: Colors.white,
           toolbarHeight: 0,
           bottom: TabBar(
               tabAlignment: TabAlignment.start,
