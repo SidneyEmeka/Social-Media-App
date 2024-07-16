@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class Notificationspage extends StatefulWidget {
   const Notificationspage({super.key});
@@ -408,6 +409,16 @@ class _NotificationspageState extends State<Notificationspage> {
     return DefaultTabController(
         length: 3,
         child: Scaffold(
+          floatingActionButton: FloatingActionButton(
+            onPressed: () {},
+            backgroundColor: Colors.red.shade900,
+            elevation: 0,
+            mini: true,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(50),
+            ),
+            child: const Icon(FontAwesomeIcons.plus, color: Colors.white),
+          ),
           backgroundColor: Colors.white,
           appBar: AppBar(
             backgroundColor: Colors.white,

@@ -107,6 +107,16 @@ class _MessagespageState extends State<Messagespage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        backgroundColor: Colors.red.shade900,
+        elevation: 0,
+        mini: true,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(50),
+        ),
+        child: const Icon(FontAwesomeIcons.envelope, color: Colors.white),
+      ),
       backgroundColor: Colors.white,
       appBar: AppBar(
         scrolledUnderElevation: 0,
