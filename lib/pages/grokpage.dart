@@ -39,7 +39,7 @@ class Grokpage extends StatelessWidget {
               onPressed: () {},
               style: ElevatedButton.styleFrom(
                   minimumSize: Size(MediaQuery.of(context).size.width - 10, 40),
-                  backgroundColor: Colors.red,
+                  backgroundColor: Colors.deepOrange.shade900,
                   foregroundColor: Colors.white),
               child: const Text(
                 "Subscribe now",

@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class Searchpage extends StatefulWidget {
   const Searchpage({super.key});
@@ -142,6 +143,20 @@ class _SearchpageState extends State<Searchpage> {
     return DefaultTabController(
       length: mytabs.length,
       child: Scaffold(
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {},
+          backgroundColor: Colors.deepOrange.shade900,
+          elevation: 0,
+          mini: true,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(50),
+          ),
+          child: const Icon(
+            FontAwesomeIcons.plus,
+            color: Colors.white,
+            size: 20,
+          ),
+        ),
         appBar: AppBar(
           backgroundColor: Colors.white,
           toolbarHeight: 0,

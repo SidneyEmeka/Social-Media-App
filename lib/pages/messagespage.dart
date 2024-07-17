@@ -109,17 +109,46 @@ class _MessagespageState extends State<Messagespage> {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
-        backgroundColor: Colors.red.shade900,
         elevation: 0,
         mini: true,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(50),
         ),
-        child: const Icon(
-          FontAwesomeIcons.envelope,
-          color: Colors.white,
-          size: 15,
+        child: Stack(
+          alignment: Alignment.center,
+          children: [
+            Container(
+              height: 50,
+              width: 50,
+              decoration: BoxDecoration(
+                  color: Colors.deepOrange.shade900, shape: BoxShape.circle),
+            ),
+            const Icon(
+              FontAwesomeIcons.envelope,
+              size: 20,
+              color: Colors.white,
+            ),
+            Positioned(
+              right: 6,
+              bottom: 5,
+              child: Container(
+                  padding: const EdgeInsets.all(2),
+                  decoration: BoxDecoration(
+                      color: Colors.red.shade900, shape: BoxShape.circle),
+                  child: const Icon(
+                    FontAwesomeIcons.plus,
+                    size: 8,
+                    color: Colors.white,
+                    weight: 30,
+                  )),
+            ),
+          ],
         ),
+        // child: const Icon(
+        //   FontAwesomeIcons.envelope,
+        //   color: Colors.white,
+        //   size: 15,
+        // ),
       ),
       backgroundColor: Colors.white,
       appBar: AppBar(
