@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
           useMaterial3: true,
           colorScheme: ColorScheme.fromSeed(
-              seedColor: Colors.red.withOpacity(0.8))),
+              seedColor: Colors.white)),
       debugShowCheckedModeBanner: false,
       home: const AuthScreen(),
     );

@@ -417,7 +417,11 @@ class _NotificationspageState extends State<Notificationspage> {
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(50),
             ),
-            child: const Icon(FontAwesomeIcons.plus, color: Colors.white),
+            child: const Icon(
+              FontAwesomeIcons.plus,
+              color: Colors.white,
+              size: 20,
+            ),
           ),
           backgroundColor: Colors.white,
           appBar: AppBar(

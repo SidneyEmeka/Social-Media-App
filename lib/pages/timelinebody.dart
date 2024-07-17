@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:twitter/pages/foryouposts.dart';
 
 class Postspage extends StatelessWidget {
@@ -9,6 +10,20 @@ class Postspage extends StatelessWidget {
     return DefaultTabController(
         length: 2,
         child: Scaffold(
+            floatingActionButton: FloatingActionButton(
+              onPressed: () {},
+              backgroundColor: Colors.red.shade900,
+              elevation: 0,
+              mini: true,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(50),
+              ),
+              child: const Icon(
+                FontAwesomeIcons.plus,
+                color: Colors.white,
+                size: 20,
+              ),
+            ),
             backgroundColor: Colors.white,
             appBar: AppBar(
               backgroundColor: Colors.white,

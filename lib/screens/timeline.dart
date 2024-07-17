@@ -71,7 +71,29 @@ class _UserTimelineState extends State<UserTimeline> {
       case 1:
         return searchbar();
       case 2:
-        return const Text("Space");
+        return const Padding(
+          padding: EdgeInsets.only(right: 15.0),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(
+                FontAwesomeIcons.squareMinus,
+                size: 20,
+              ),
+              SizedBox(
+                width: 1,
+              ),
+              Text(
+                "Grok",
+                style: TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w500,
+                ),
+              )
+            ],
+          ),
+        );
       case 3:
         return const Text(
           "Communities",
@@ -204,7 +226,7 @@ class _UserTimelineState extends State<UserTimeline> {
       label: "search",
     ),
     const BottomNavigationBarItem(
-      icon: Icon(Icons.rectangle_outlined),
+      icon: Icon(FontAwesomeIcons.squareMinus),
       label: "mic",
     ),
     const BottomNavigationBarItem(
@@ -315,7 +337,7 @@ class _UserTimelineState extends State<UserTimeline> {
                     )
                   ],
                 ),
-                Icon(FontAwesomeIcons.circleUser)
+                const Icon(FontAwesomeIcons.circleUser)
               ],
             ),
             const ListTile(
@@ -456,7 +478,7 @@ class _UserTimelineState extends State<UserTimeline> {
               ],
             ),
             verticalSpace(50),
-            Icon(FontAwesomeIcons.moon)
+            const Icon(FontAwesomeIcons.moon)
           ],
         ),
       )),
@@ -479,7 +501,9 @@ class _UserTimelineState extends State<UserTimeline> {
       ),
       body: buildBody(selectedIndex),
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.red,
+        elevation: 0,
+        type: BottomNavigationBarType.fixed,
+        backgroundColor: Colors.white,
         showUnselectedLabels: false,
         showSelectedLabels: false,
         currentIndex: selectedIndex,
