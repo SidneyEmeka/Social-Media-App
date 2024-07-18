@@ -143,6 +143,7 @@ class _SearchpageState extends State<Searchpage> {
     return DefaultTabController(
       length: mytabs.length,
       child: Scaffold(
+        backgroundColor: Colors.white,
         floatingActionButton: FloatingActionButton(
           onPressed: () {},
           backgroundColor: Colors.deepOrange.shade900,

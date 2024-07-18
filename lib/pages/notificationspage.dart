@@ -409,6 +409,7 @@ class _NotificationspageState extends State<Notificationspage> {
     return DefaultTabController(
         length: 3,
         child: Scaffold(
+
           floatingActionButton: FloatingActionButton(
             onPressed: () {},
             backgroundColor: Colors.deepOrange.shade900,

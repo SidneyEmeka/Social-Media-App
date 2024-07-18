@@ -86,6 +86,7 @@ class _CommunitypageState extends State<Communitypage> {
     return DefaultTabController(
       length: 2,
       child: Scaffold(
+        backgroundColor: Colors.white,
         appBar: AppBar(
           backgroundColor: Colors.white,
           toolbarHeight: 0,
