@@ -28,8 +28,7 @@ Implementing Page Rendering, Routing, Reusable widgets, UI<br>
 		</tr>
 	</tbody>
 </table>
-
-<table>
+<!-- <table>
 	<tbody width="100%">
 	<tr>
 			<th>Timeline</th>	
@@ -52,5 +51,5 @@ Implementing Page Rendering, Routing, Reusable widgets, UI<br>
 			</td>
 		</tr>
 	</tbody>
-</table>
+</table>-->
 
