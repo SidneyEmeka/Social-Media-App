@@ -12,7 +12,7 @@ Implementing Page Rendering, Routing, Reusable widgets, UI<br>
 		</tr>
 		<tr>
 			<td>
-			<img src="https://github.com/SidneyEmeka/myfiles/blob/master/twitter/onboarding.png" alt="signUP"></img>
+			<img src="https://github.com/SidneyEmeka/myfiles/blob/master/twitter/onboarding.jpg" alt="signUP"></img>
 			</td>
 			 <td>
 			<img src="https://github.com/SidneyEmeka/myfiles/blob/master/twitter/timeline.jpg" alt="HOME"></img>
