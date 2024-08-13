@@ -8,14 +8,14 @@ Implementing Page Rendering, Routing, Reusable widgets, UI<br>
 	<tbody width="100%">
 	<tr>
 			<th>On boarding</th>	
-			<th>Mock-up</th>	
+			<th>Timeline</th>	
 		</tr>
 		<tr>
 			<td>
-			<img src="https://github.com/SidneyEmeka/myfiles/blob/master/rdm/onboarding.png" alt="signUP"></img>
+			<img src="https://github.com/SidneyEmeka/myfiles/blob/master/twitter/onboarding.png" alt="signUP"></img>
 			</td>
 			 <td>
-			<img src="https://github.com/SidneyEmeka/myfiles/blob/master/rdm/signUP.png" alt="HOME2"></img>
+			<img src="https://github.com/SidneyEmeka/myfiles/blob/master/twitter/timeline.jpg" alt="HOME"></img>
 			</td>
 		</tr>
 		<tr>
@@ -28,18 +28,19 @@ Implementing Page Rendering, Routing, Reusable widgets, UI<br>
 		</tr>
 	</tbody>
 </table>
-<!-- <table>
+
+<table>
 	<tbody width="100%">
 	<tr>
-			<th>Timeline</th>	
+			<th>Sidebar</th>	
 			<th>Trending</th>	
 		</tr>
 		<tr>
 			<td>
-			<img src="https://github.com/SidneyEmeka/myfiles/blob/master/rdm/timeline.png" alt="signUP"></img>
+			<img src="https://github.com/SidneyEmeka/myfiles/blob/master/twitter/sidebar.jpg" alt="sidebar"></img>
 			</td>
 			 <td>
-			<img src="https://github.com/SidneyEmeka/myfiles/blob/master/rdm/trending.png" alt="HOME2"></img>
+			<img src="https://github.com/SidneyEmeka/myfiles/blob/master/twitter/trending.jpg" alt="trending"></img>
 			</td>
 		</tr>
 		<tr>
@@ -51,5 +52,58 @@ Implementing Page Rendering, Routing, Reusable widgets, UI<br>
 			</td>
 		</tr>
 	</tbody>
-</table>-->
+</table>
+
+
+<table>
+	<tbody width="100%">
+	<tr>
+			<th>Grok</th>	
+			<th>Communities</th>	
+		</tr>
+		<tr>
+			<td>
+			<img src="https://github.com/SidneyEmeka/myfiles/blob/master/twitter/grok.jpg" alt="grok"></img>
+			</td>
+			 <td>
+			<img src="https://github.com/SidneyEmeka/myfiles/blob/master/twitter/communities.jpg" alt="comms"></img>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				🔗 <a href="https://twitter.com/siswipe">Tweet</a>
+			</td>
+			<td>
+				🔗 <a href="https://x.com/sidswipe">Tweet</a>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<table>
+	<tbody width="100%">
+	<tr>
+			<th>Messages</th>	
+			<th>Notifications</th>	
+		</tr>
+		<tr>
+			<td>
+			<img src="https://github.com/SidneyEmeka/myfiles/blob/master/twitter/messages.jpg" alt="messages"></img>
+			</td>
+			 <td>
+			<img src="https://github.com/SidneyEmeka/myfiles/blob/master/twitter/notifications.jpg" alt="notification"></img>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				🔗 <a href="https://twitter.com/siswipe">Tweet</a>
+			</td>
+			<td>
+				🔗 <a href="https://x.com/sidswipe">Tweet</a>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+
 
